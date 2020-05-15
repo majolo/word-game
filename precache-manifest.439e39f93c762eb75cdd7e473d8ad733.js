@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb24e6a084e4578077ccea8a3a4f4f62",
+    "revision": "e5dc34037e4a0c3155a07df2cc03ae72",
     "url": "/word-game/index.html"
   },
   {
-    "revision": "1e8b395389681a1503db",
+    "revision": "bcc53af47f448c1004cd",
     "url": "/word-game/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/word-game/static/js/2.2bcfb2e4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1e8b395389681a1503db",
-    "url": "/word-game/static/js/main.f7ee1640.chunk.js"
+    "revision": "bcc53af47f448c1004cd",
+    "url": "/word-game/static/js/main.b2469466.chunk.js"
   },
   {
     "revision": "aafb593b70090a32de96",

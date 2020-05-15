@@ -1,7 +1,12 @@
 import React, {useState} from "react";
+import {List} from "./List";
 
 interface CreateGameProps {
     // pushItemFunc: (item: string) => void;
+}
+
+export function CleanInput(input: string) {
+    return input.toLowerCase().trim()
 }
 
 export const CreateGameForm: React.FC<CreateGameProps> = props => {
@@ -14,20 +19,22 @@ export const CreateGameForm: React.FC<CreateGameProps> = props => {
     }
 
     function handleSubmit(event: any) {
-        setShareValue("Share this link: " + window.location + btoa(formValue))
-        // alert("creating page: " + btoa(formValue))
+        setShareValue( window.location + btoa(CleanInput(formValue)))
         event.preventDefault();
     }
 
     return (
         <div>
+            <p><small>Enter a word to create a game:</small></p>
             <form onSubmit={handleSubmit}>
                 <label>
                     <input type="text" value={formValue} onChange={handleChange} />
                 </label>
                 <input type="submit" value="Create Game" />
             </form>
-            {shareValue}
+            {shareValue.length > 0 && (
+                <p>Share this link: <a href={shareValue}>{shareValue}</a></p>
+            )}
         </div>
 
     );

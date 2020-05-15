@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import {CleanInput} from "./CreateForm";
 
 interface WordFormProps {
     pushItemFunc: (item: string) => void;
@@ -16,7 +17,13 @@ export const WordForm: React.FC<WordFormProps> = props => {
         // Append to parent list of words
         // Sort the list
         // If it matches the word minus / then say congrats and how many guesses it took
-        props.pushItemFunc(formValue)
+        // var checkWord = require('check-word'), words = checkWord('en'); // setup the language for check, default is en
+
+        // console.log(words.check(formValue))
+
+
+
+        props.pushItemFunc(CleanInput(formValue))
         setFormValue('')
         event.preventDefault();
     }
@@ -37,7 +44,7 @@ interface ListProps {
 
 export const List: React.FC<ListProps> = props => {
 
-    let guessWord = atob(window.location.pathname.slice(1))
+    let guessWord = atob(window.location.pathname.slice(11))
 
     const items = [guessWord]
     const [listItems, setListItems] = useState(items);

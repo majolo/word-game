@@ -19,6 +19,7 @@ export const CreateGameForm: React.FC<CreateGameProps> = props => {
     }
 
     function handleSubmit(event: any) {
+        // TODO: better joining here
         setShareValue( window.location + btoa(CleanInput(formValue)))
         event.preventDefault();
     }

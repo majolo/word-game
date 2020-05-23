@@ -7,8 +7,8 @@ import {RandomGame} from "./Random";
 function App() {
   let path = window.location.pathname.slice(11)
 
-
   return (
+    // TODO: better routing here
     <div className="App">
       <header className="App-header">
         <p>

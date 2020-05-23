@@ -11,7 +11,8 @@ export const RandomGame: React.FC<RandomGameProps> = props => {
     function randomGame() {
         var item = hard[Math.floor(Math.random() * hard.length)];
         var hashed = btoa(item)
-        window.location.replace(window.location + "/" + hashed);
+        // TODO: do a better join here
+        window.location.replace(window.location + hashed);
     }
 
     return (

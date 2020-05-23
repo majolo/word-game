@@ -39,7 +39,6 @@ export const WordForm: React.FC<WordFormProps> = props => {
 }
 
 interface ListProps {
-    // ListItems: string[];
 }
 
 export const List: React.FC<ListProps> = props => {
@@ -73,8 +72,10 @@ export const List: React.FC<ListProps> = props => {
 
     return (
         <div>
+            <div>
+                Current Score: {renderItems.length -1}
+            </div>
             {renderItems}
-            {/*{listItems}*/}
         </div>
     );
 }
